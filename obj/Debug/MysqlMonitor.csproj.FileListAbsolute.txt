@@ -13,3 +13,17 @@ D:\Projects\C#\MysqlMonitor\bin\Debug\Google.Protobuf.dll
 D:\Projects\C#\MysqlMonitor\bin\Debug\BouncyCastle.Crypto.dll
 D:\Projects\C#\MysqlMonitor\bin\Debug\Renci.SshNet.dll
 D:\Projects\C#\MysqlMonitor\bin\Debug\MySql.Data.xml
+E:\C#\mysqlmonitor\bin\Debug\MysqlMonitor.exe.config
+E:\C#\mysqlmonitor\bin\Debug\MysqlMonitor.exe
+E:\C#\mysqlmonitor\bin\Debug\MysqlMonitor.pdb
+E:\C#\mysqlmonitor\bin\Debug\Google.Protobuf.dll
+E:\C#\mysqlmonitor\bin\Debug\BouncyCastle.Crypto.dll
+E:\C#\mysqlmonitor\bin\Debug\Renci.SshNet.dll
+E:\C#\mysqlmonitor\bin\Debug\MySql.Data.xml
+E:\C#\mysqlmonitor\obj\Debug\MysqlMonitor.csprojAssemblyReference.cache
+E:\C#\mysqlmonitor\obj\Debug\MysqlMonitor.Mysql_Monitor.resources
+E:\C#\mysqlmonitor\obj\Debug\MysqlMonitor.Properties.Resources.resources
+E:\C#\mysqlmonitor\obj\Debug\MysqlMonitor.csproj.GenerateResource.cache
+E:\C#\mysqlmonitor\obj\Debug\MysqlMonitor.csproj.CopyComplete
+E:\C#\mysqlmonitor\obj\Debug\MysqlMonitor.exe
+E:\C#\mysqlmonitor\obj\Debug\MysqlMonitor.pdb
