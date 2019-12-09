@@ -43,6 +43,9 @@
             this.Bs = new System.Windows.Forms.BindingSource(this.components);
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.复制ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.Querytime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Queryvalue = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Breakpoint_btn = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Bs)).BeginInit();
@@ -51,6 +54,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.Breakpoint_btn);
             this.groupBox1.Controls.Add(this.txt_searchkey);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.Btn_start);
@@ -69,7 +73,7 @@
             // 
             // txt_searchkey
             // 
-            this.txt_searchkey.Location = new System.Drawing.Point(660, 20);
+            this.txt_searchkey.Location = new System.Drawing.Point(672, 20);
             this.txt_searchkey.Name = "txt_searchkey";
             this.txt_searchkey.Size = new System.Drawing.Size(180, 21);
             this.txt_searchkey.TabIndex = 8;
@@ -77,7 +81,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(625, 24);
+            this.label4.Location = new System.Drawing.Point(638, 24);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(29, 12);
             this.label4.TabIndex = 7;
@@ -85,7 +89,7 @@
             // 
             // Btn_start
             // 
-            this.Btn_start.Location = new System.Drawing.Point(513, 19);
+            this.Btn_start.Location = new System.Drawing.Point(557, 19);
             this.Btn_start.Name = "Btn_start";
             this.Btn_start.Size = new System.Drawing.Size(75, 23);
             this.Btn_start.TabIndex = 6;
@@ -97,7 +101,7 @@
             // 
             this.txt_pass.Location = new System.Drawing.Point(375, 20);
             this.txt_pass.Name = "txt_pass";
-            this.txt_pass.Size = new System.Drawing.Size(121, 21);
+            this.txt_pass.Size = new System.Drawing.Size(91, 21);
             this.txt_pass.TabIndex = 5;
             this.txt_pass.Text = "root";
             // 
@@ -146,9 +150,14 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Querytime,
+            this.Queryvalue});
             this.dataGridView1.Location = new System.Drawing.Point(12, 71);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 23;
             this.dataGridView1.Size = new System.Drawing.Size(867, 367);
             this.dataGridView1.TabIndex = 1;
@@ -166,6 +175,30 @@
             this.复制ToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
             this.复制ToolStripMenuItem.Text = "复制";
             this.复制ToolStripMenuItem.Click += new System.EventHandler(this.复制ToolStripMenuItem_Click);
+            // 
+            // Querytime
+            // 
+            this.Querytime.HeaderText = "查询时间";
+            this.Querytime.Name = "Querytime";
+            this.Querytime.ReadOnly = true;
+            this.Querytime.Width = 150;
+            // 
+            // Queryvalue
+            // 
+            this.Queryvalue.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Queryvalue.HeaderText = "查询语句";
+            this.Queryvalue.Name = "Queryvalue";
+            this.Queryvalue.ReadOnly = true;
+            // 
+            // Breakpoint_btn
+            // 
+            this.Breakpoint_btn.Location = new System.Drawing.Point(473, 19);
+            this.Breakpoint_btn.Name = "Breakpoint_btn";
+            this.Breakpoint_btn.Size = new System.Drawing.Size(75, 23);
+            this.Breakpoint_btn.TabIndex = 9;
+            this.Breakpoint_btn.Text = "下断";
+            this.Breakpoint_btn.UseVisualStyleBackColor = true;
+            this.Breakpoint_btn.Click += new System.EventHandler(this.Breakpoint_btn_Click);
             // 
             // Mysql_Monitor
             // 
@@ -202,6 +235,9 @@
         private System.Windows.Forms.BindingSource Bs;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem 复制ToolStripMenuItem;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Querytime;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Queryvalue;
+        private System.Windows.Forms.Button Breakpoint_btn;
     }
 }
 
