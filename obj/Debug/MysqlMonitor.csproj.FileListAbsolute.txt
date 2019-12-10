@@ -1,6 +1,5 @@
 D:\Projects\C#\MysqlMonitor\bin\Debug\MysqlMonitor.exe
 D:\Projects\C#\MysqlMonitor\bin\Debug\MysqlMonitor.pdb
-D:\Projects\C#\MysqlMonitor\obj\Debug\MysqlMonitor.csprojAssemblyReference.cache
 D:\Projects\C#\MysqlMonitor\obj\Debug\MysqlMonitor.Properties.Resources.resources
 D:\Projects\C#\MysqlMonitor\obj\Debug\MysqlMonitor.csproj.GenerateResource.cache
 D:\Projects\C#\MysqlMonitor\obj\Debug\MysqlMonitor.exe

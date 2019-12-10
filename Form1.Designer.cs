@@ -31,8 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.Breakpoint_btn = new System.Windows.Forms.Button();
-            this.txt_searchkey = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.Btn_start = new System.Windows.Forms.Button();
             this.txt_pass = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -45,11 +43,12 @@
             this.Queryvalue = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.复制ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.清空ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.BreakTime_toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.Counts_toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.清空ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.label5 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
@@ -58,9 +57,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.Breakpoint_btn);
-            this.groupBox1.Controls.Add(this.txt_searchkey);
-            this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.Btn_start);
             this.groupBox1.Controls.Add(this.txt_pass);
             this.groupBox1.Controls.Add(this.label3);
@@ -68,7 +66,7 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.txt_host);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(12, 13);
+            this.groupBox1.Location = new System.Drawing.Point(12, 5);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(867, 52);
             this.groupBox1.TabIndex = 0;
@@ -77,7 +75,7 @@
             // 
             // Breakpoint_btn
             // 
-            this.Breakpoint_btn.Location = new System.Drawing.Point(473, 19);
+            this.Breakpoint_btn.Location = new System.Drawing.Point(484, 19);
             this.Breakpoint_btn.Name = "Breakpoint_btn";
             this.Breakpoint_btn.Size = new System.Drawing.Size(75, 23);
             this.Breakpoint_btn.TabIndex = 9;
@@ -85,25 +83,9 @@
             this.Breakpoint_btn.UseVisualStyleBackColor = true;
             this.Breakpoint_btn.Click += new System.EventHandler(this.Breakpoint_btn_Click);
             // 
-            // txt_searchkey
-            // 
-            this.txt_searchkey.Location = new System.Drawing.Point(672, 20);
-            this.txt_searchkey.Name = "txt_searchkey";
-            this.txt_searchkey.Size = new System.Drawing.Size(180, 21);
-            this.txt_searchkey.TabIndex = 8;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(638, 24);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(29, 12);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "搜索";
-            // 
             // Btn_start
             // 
-            this.Btn_start.Location = new System.Drawing.Point(557, 19);
+            this.Btn_start.Location = new System.Drawing.Point(579, 19);
             this.Btn_start.Name = "Btn_start";
             this.Btn_start.Size = new System.Drawing.Size(75, 23);
             this.Btn_start.TabIndex = 6;
@@ -172,12 +154,12 @@
             this.Querytime,
             this.Queryvalue});
             this.dataGridView1.ContextMenuStrip = this.contextMenuStrip1;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 71);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 63);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 23;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(867, 381);
+            this.dataGridView1.Size = new System.Drawing.Size(867, 389);
             this.dataGridView1.TabIndex = 1;
             // 
             // Querytime
@@ -205,9 +187,16 @@
             // 复制ToolStripMenuItem
             // 
             this.复制ToolStripMenuItem.Name = "复制ToolStripMenuItem";
-            this.复制ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.复制ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
             this.复制ToolStripMenuItem.Text = "复制查询语句";
             this.复制ToolStripMenuItem.Click += new System.EventHandler(this.复制ToolStripMenuItem_Click);
+            // 
+            // 清空ToolStripMenuItem
+            // 
+            this.清空ToolStripMenuItem.Name = "清空ToolStripMenuItem";
+            this.清空ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.清空ToolStripMenuItem.Text = "清空";
+            this.清空ToolStripMenuItem.Click += new System.EventHandler(this.清空ToolStripMenuItem_Click);
             // 
             // statusStrip1
             // 
@@ -235,15 +224,18 @@
             // toolStripStatusLabel3
             // 
             this.toolStripStatusLabel3.Name = "toolStripStatusLabel3";
-            this.toolStripStatusLabel3.Size = new System.Drawing.Size(194, 17);
-            this.toolStripStatusLabel3.Text = "代码参考自：Seay Mysql监控插件";
+            this.toolStripStatusLabel3.Size = new System.Drawing.Size(288, 17);
+            this.toolStripStatusLabel3.Text = "Code by S0cke3t 代码参考自 Seay Mysql监控插件";
             // 
-            // 清空ToolStripMenuItem
+            // label5
             // 
-            this.清空ToolStripMenuItem.Name = "清空ToolStripMenuItem";
-            this.清空ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.清空ToolStripMenuItem.Text = "清空";
-            this.清空ToolStripMenuItem.Click += new System.EventHandler(this.清空ToolStripMenuItem_Click);
+            this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.Color.Red;
+            this.label5.Location = new System.Drawing.Point(682, 17);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(161, 24);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "适用于日志表中argument字段\r\n为BLOB类型的mysql版本";
             // 
             // Mysql_Monitor
             // 
@@ -253,6 +245,9 @@
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox1);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(908, 516);
+            this.MinimumSize = new System.Drawing.Size(908, 516);
             this.Name = "Mysql_Monitor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Mysql Monitor";
@@ -270,8 +265,6 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox txt_searchkey;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button Btn_start;
         private System.Windows.Forms.TextBox txt_pass;
         private System.Windows.Forms.Label label3;
@@ -290,6 +283,7 @@
         private System.Windows.Forms.ToolStripStatusLabel Counts_toolStripStatusLabel;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel3;
         private System.Windows.Forms.ToolStripMenuItem 清空ToolStripMenuItem;
+        private System.Windows.Forms.Label label5;
     }
 }
 

@@ -77,9 +77,18 @@ namespace MysqlMonitor
 
         private void Breakpoint_btn_Click(object sender, EventArgs e)
         {
-            this.func_getmysqlcom("set global general_log=on;SET GLOBAL log_output='table';");
-            Str_Datetime = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
-            BreakTime_toolStripStatusLabel.Text = "下断时间: " + Str_Datetime;
+            try
+            {
+                this.func_getmysqlcom("set global general_log=on;SET GLOBAL log_output='table';");
+                Str_Datetime = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+                BreakTime_toolStripStatusLabel.Text = "下断时间: " + Str_Datetime;
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message, "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
         }
 
         private void 清空ToolStripMenuItem_Click(object sender, EventArgs e)
