@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Mysql_Monitor));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.Breakpoint_btn = new System.Windows.Forms.Button();
             this.Btn_start = new System.Windows.Forms.Button();
             this.txt_pass = new System.Windows.Forms.TextBox();
@@ -49,7 +50,6 @@
             this.BreakTime_toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.Counts_toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.label5 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
@@ -73,6 +73,16 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "配置";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.Color.Red;
+            this.label5.Location = new System.Drawing.Point(682, 17);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(161, 24);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "适用于日志表中argument字段\r\n为BLOB类型的mysql版本";
             // 
             // Breakpoint_btn
             // 
@@ -219,7 +229,7 @@
             // Counts_toolStripStatusLabel
             // 
             this.Counts_toolStripStatusLabel.Name = "Counts_toolStripStatusLabel";
-            this.Counts_toolStripStatusLabel.Size = new System.Drawing.Size(683, 17);
+            this.Counts_toolStripStatusLabel.Size = new System.Drawing.Size(589, 17);
             this.Counts_toolStripStatusLabel.Spring = true;
             // 
             // toolStripStatusLabel3
@@ -227,16 +237,6 @@
             this.toolStripStatusLabel3.Name = "toolStripStatusLabel3";
             this.toolStripStatusLabel3.Size = new System.Drawing.Size(288, 17);
             this.toolStripStatusLabel3.Text = "Code by S0cke3t 代码参考自 Seay Mysql监控插件";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.ForeColor = System.Drawing.Color.Red;
-            this.label5.Location = new System.Drawing.Point(682, 17);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(161, 24);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "适用于日志表中argument字段\r\n为BLOB类型的mysql版本";
             // 
             // Mysql_Monitor
             // 
